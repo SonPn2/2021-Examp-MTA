@@ -1,0 +1,50 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Chao cac ban den voi chuong trinh cua SON");
+    Console.WriteLine ("--");
+    Console.WriteLine ("Nhap ten KH:");
+    string name = Console.ReadLine();
+    Console.WriteLine ("Nhap Ma KH:");
+    string code = Console.ReadLine();
+    Console.WriteLine ("So phut goi:");
+    int countNumber = Convert.ToInt32(Console.ReadLine());
+//-------------------------
+  int moneyDefaul = 27000;
+  int moneyCountNumber = 0;
+
+
+
+  if(code == "0") {
+     if(countNumber <= 200){
+       if(countNumber <=50){
+         moneyCountNumber = 0;
+       } else  {
+         moneyCountNumber = moneyCountNumber + ((countNumber - 50)*120);
+       }
+    } else if(countNumber > 200 & countNumber <=400) {
+        moneyCountNumber = moneyCountNumber + 150*120 +((countNumber-200)*80);
+    } else if(countNumber > 400) {
+        moneyCountNumber = moneyCountNumber + 150*120 + 200*80+((countNumber-400)*40);
+    }
+  } else {
+    if(countNumber <= 200){
+        moneyCountNumber = moneyCountNumber + (countNumber*120);
+    } else if(countNumber > 200 & countNumber <=400) {
+        moneyCountNumber = moneyCountNumber + 200*120 +((countNumber-200)*80);
+    } else if(countNumber > 400) {
+        moneyCountNumber = moneyCountNumber + 200*120 + 200*80+((countNumber-400)*40);
+    }
+  }
+
+  int vat = (moneyDefaul + moneyCountNumber) * 10/100;
+  int tongtienchuavat = moneyDefaul + moneyCountNumber;
+  int tongtiencovat = tongtienchuavat + vat;
+ Console.WriteLine ("VAT=:" + vat );
+ Console.WriteLine ("MONEY NOT VAT=:" + (moneyDefaul + moneyCountNumber) );
+ Console.WriteLine ("MONEY VAT=:" + tongtiencovat );
+ Console.WriteLine ("=============CHAO CAC BAN=============");
+  }
+}
+

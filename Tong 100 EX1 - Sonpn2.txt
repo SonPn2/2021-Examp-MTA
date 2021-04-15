@@ -1,0 +1,16 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Chao cac ban den voi chuong trinh cua SON");
+    Console.WriteLine ("--");
+
+int i =1;
+int count = 0;
+while (i <= 100){
+    count = count + i;
+    i++;
+}
+Console.WriteLine ("Tong 1-100=:" + count);
+}
+}

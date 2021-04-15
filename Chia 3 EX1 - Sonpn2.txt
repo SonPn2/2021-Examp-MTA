@@ -1,0 +1,18 @@
+using System;
+
+class MainClass {
+  public static void Main (string[] args) {
+    Console.WriteLine ("Chao cac ban den voi chuong trinh cua SON: chia het cho 3");
+    Console.WriteLine ("--");
+
+int i =20;
+int count = 0;
+while (i <= 50){
+  if(i%3==0){
+    Console.WriteLine("so: " + i);
+  }
+  i++;
+}
+Console.WriteLine ("KETTHUC");
+}
+}
